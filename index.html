@@ -1,211 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+    body {
+      background: #0f172a;
+      color: white;
+      scroll-behavior: smooth;
+    }
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
 
-        <title>Anika Raisa</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/crisis-management.png">
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Anika</a>
-                </div>
+    header h1 {
+      color: #38bdf8;
+    }
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+    nav a:hover {
+      color: #38bdf8;
+    }
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Anika</span><br> Tech Enthusiast</h1>
+    section {
+      padding: 100px 50px;
+      min-height: 100vh;
+    }
 
-                    <a href="#contact" class="button">Contact</a>
-                </div>
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+    }
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/anika-raisa-9b30501b3/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.behance.net/anikaraisa" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="https://github.com/anikaraisa11" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
+    .hero h2 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60"  height="600" height="630" href="assets/img/ani.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+    .hero p {
+      margin-top: 15px;
+      opacity: 0.7;
+    }
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #38bdf8;
+      border: none;
+      color: black;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/images1.png"  alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Anika</h2>
-                        <p class="about__text" align= justify>
-                            Welcome to my tech world! I'm Anika, a passionate tech enthusiast with a knack for crafting captivating digital experiences. My expertise spans a wide range of coding languages, including HTML, CSS, JavaScript, and PHP. With Laravel as my go-to framework, I specialize in building sleek and efficient web applications that push the boundaries of what's possible online. Additionally, I harness the versatility of WordPress to create stunning websites that not only look great but also function seamlessly. Beyond my technical skills, I bring a creative flair and a keen eye for design to every project. Whether it's developing custom themes, optimizing performance, or implementing complex backend systems, I'm dedicated to delivering top-notch solutions that exceed expectations. Let's collaborate and bring your ideas to life in the digital realm!</p>           
-                    </div>                                   
-                </div>
-            </section>
+    .btn:hover {
+      transform: scale(1.1);
+    }
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+    .skills, .projects, .education, .goals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text" align= justify>As a dedicated Full Stack Developer, I bring a versatile skill set that combines front-end finesse with robust back-end expertise. My proficiency spans a range of technologies, allowing me to create seamless and scalable solutions. Here's a snapshot of my key skills:
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
 
-                        </p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+    }
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">WordPress</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/skill1.png" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);} 
+      to { opacity: 1; transform: translateY(0);} 
+    }
 
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/project1.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/project2.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/project3.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/project4.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/project5.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/project6.png" alt="">
-                    </a>
-                   
-                </div>
-            </section>
+  </style>
+</head>
+<body>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+<header>
+  <h1>My Portfolio</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#goals">Goals</a>
+  </nav>
+</header>
 
-                <div class="contact__container bd-grid">
-                    <form target="_blank" action="https://formsubmit.co/anikaraisa1998@gmail.com" method="POST"  class="contact__form">
-                        <input type="text" name="Name" placeholder="Full Name" required class="contact__input">
-                        <input type="mail" name="Email" placeholder="Email" required class="contact__input">
-                        <textarea name="Message" placeholder="Message" required id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <button type="Submit" value="Send" class="contact__button button"> Submit </button>
-                    </form>
-                </div>
-            </section>
-        </main>
+<section class="hero" id="home">
+  <h2>Hello, I'm a Developer 🚀</h2>
+  <p>AI Agent Builder | Data Analyst | Frontend Developer</p>
+  <button class="btn">View My Work</button>
+</section>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Anika</p>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/anika.raisa.357" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://www.instagram.com/_ani.ra/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://twitter.com/Nika__Risa" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-            </div>
-            <!-- <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p> -->
-        </footer>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card">AI Agent Development</div>
+    <div class="card">Data Analysis</div>
+    <div class="card">Frontend Development</div>
+  </div>
+</section>
 
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">Project 1</div>
+    <div class="card">Project 2</div>
+    <div class="card">Project 3</div>
+  </div>
+</section>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+<section id="education">
+  <h2>Education</h2>
+  <div class="education">
+    <div class="card">Your Degree / University</div>
+  </div>
+</section>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+<section id="goals">
+  <h2>Future Goals</h2>
+  <div class="goals">
+    <div class="card">Build scalable AI SaaS</div>
+    <div class="card">Master Data Science</div>
+    <div class="card">Create impactful products</div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 My Portfolio</p>
+</footer>
+
+</body>
 </html>
-
